@@ -5,7 +5,6 @@ import {
   Bug,
   ListTodo,
   FileX,
-  HelpCircle,
   Lock,
   Bell,
   Package,
@@ -22,20 +21,19 @@ import {
   Command,
   GalleryVerticalEnd,
 } from 'lucide-react'
-import { ClerkLogo } from '@/assets/clerk-logo'
 import { type SidebarData } from '../types'
 
 export const sidebarData: SidebarData = {
   user: {
-    name: 'satnaing',
-    email: 'satnaingdev@gmail.com',
+    name: 'Demo manager',
+    email: 'demo@example.com',
     avatar: '/avatars/shadcn.jpg',
   },
   teams: [
     {
-      name: 'Shadcn Admin',
+      name: 'Kerege Admin',
       logo: Command,
-      plan: 'Vite + ShadcnUI',
+      plan: 'Demo · MicroStudio',
     },
     {
       name: 'Acme Inc',
@@ -77,24 +75,6 @@ export const sidebarData: SidebarData = {
           title: 'Users',
           url: '/users',
           icon: Users,
-        },
-        {
-          title: 'Secured by Clerk',
-          icon: ClerkLogo,
-          items: [
-            {
-              title: 'Sign In',
-              url: '/clerk/sign-in',
-            },
-            {
-              title: 'Sign Up',
-              url: '/clerk/sign-up',
-            },
-            {
-              title: 'User Management',
-              url: '/clerk/user-management',
-            },
-          ],
         },
       ],
     },
@@ -193,11 +173,6 @@ export const sidebarData: SidebarData = {
               icon: Monitor,
             },
           ],
-        },
-        {
-          title: 'Help Center',
-          url: '/help-center',
-          icon: HelpCircle,
         },
       ],
     },
