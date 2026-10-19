@@ -17,33 +17,33 @@ import {
 const items = [
   {
     id: 'recents',
-    label: 'Recents',
+    label: 'Недавние',
   },
   {
     id: 'home',
-    label: 'Home',
+    label: 'Главная',
   },
   {
     id: 'applications',
-    label: 'Applications',
+    label: 'Приложения',
   },
   {
     id: 'desktop',
-    label: 'Desktop',
+    label: 'Рабочий стол',
   },
   {
     id: 'downloads',
-    label: 'Downloads',
+    label: 'Загрузки',
   },
   {
     id: 'documents',
-    label: 'Documents',
+    label: 'Документы',
   },
 ] as const
 
 const displayFormSchema = z.object({
   items: z.array(z.string()).refine((value) => value.some((item) => item), {
-    message: 'You have to select at least one item.',
+    message: 'Выберите хотя бы один пункт.',
   }),
 })
 
@@ -72,9 +72,9 @@ export function DisplayForm() {
           render={() => (
             <FormItem>
               <div className='mb-4'>
-                <FormLabel className='text-base'>Sidebar</FormLabel>
+                <FormLabel className='text-base'>Боковое меню</FormLabel>
                 <FormDescription>
-                  Select the items you want to display in the sidebar.
+                  Выберите пункты бокового меню.
                 </FormDescription>
               </div>
               {items.map((item) => (
@@ -114,7 +114,7 @@ export function DisplayForm() {
             </FormItem>
           )}
         />
-        <Button type='submit'>Update display</Button>
+        <Button type='submit'>Сохранить</Button>
       </form>
     </Form>
   )

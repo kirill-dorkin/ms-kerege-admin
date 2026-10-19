@@ -20,14 +20,14 @@ export function GeneralError({
         )}
         <span className='font-medium'>Oops! Something went wrong {`:')`}</span>
         <p className='text-center text-muted-foreground'>
-          We apologize for the inconvenience. <br /> Please try again later.
+          Приносим извинения за неудобства. <br /> Попробуйте позже.
         </p>
         {!minimal && (
           <div className='mt-6 flex gap-4'>
             <Button variant='outline' onClick={() => history.go(-1)}>
-              Go Back
+              Назад
             </Button>
-            <Button onClick={() => navigate({ to: '/' })}>Back to Home</Button>
+            <Button onClick={() => navigate({ to: '/' })}>На главную</Button>
           </div>
         )}
       </div>

@@ -8,6 +8,9 @@ import { callTypes, roles } from '../data/data'
 import { type User } from '../data/schema'
 import { DataTableRowActions } from './data-table-row-actions'
 
+// Russian labels for the demo; values stay as in the data model.
+const STATUS_LABELS: Record<string, string> = { active: 'Активен', inactive: 'Неактивен', invited: 'Приглашён', suspended: 'Заблокирован' }
+
 export const usersColumns: ColumnDef<User>[] = [
   {
     id: 'select',
@@ -18,7 +21,7 @@ export const usersColumns: ColumnDef<User>[] = [
           (table.getIsSomePageRowsSelected() && 'indeterminate')
         }
         onCheckedChange={(value) => table.toggleAllPageRowsSelected(!!value)}
-        aria-label='Select all'
+        aria-label='Выбрать все'
         className='translate-y-0.5'
       />
     ),
@@ -29,7 +32,7 @@ export const usersColumns: ColumnDef<User>[] = [
       <Checkbox
         checked={row.getIsSelected()}
         onCheckedChange={(value) => row.toggleSelected(!!value)}
-        aria-label='Select row'
+        aria-label='Выбрать строку'
         className='translate-y-0.5'
       />
     ),
@@ -39,7 +42,7 @@ export const usersColumns: ColumnDef<User>[] = [
   {
     accessorKey: 'username',
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title='Username' />
+      <DataTableColumnHeader column={column} title='Логин' />
     ),
     cell: ({ row }) => (
       <LongText className='max-w-36 ps-3'>{row.getValue('username')}</LongText>
@@ -55,7 +58,7 @@ export const usersColumns: ColumnDef<User>[] = [
   {
     id: 'fullName',
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title='Name' />
+      <DataTableColumnHeader column={column} title='Имя' />
     ),
     cell: ({ row }) => {
       const { firstName, lastName } = row.original
@@ -76,7 +79,7 @@ export const usersColumns: ColumnDef<User>[] = [
   {
     accessorKey: 'phoneNumber',
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title='Phone Number' />
+      <DataTableColumnHeader column={column} title='Телефон' />
     ),
     cell: ({ row }) => <div>{row.getValue('phoneNumber')}</div>,
     enableSorting: false,
@@ -84,7 +87,7 @@ export const usersColumns: ColumnDef<User>[] = [
   {
     accessorKey: 'status',
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title='Status' />
+      <DataTableColumnHeader column={column} title='Статус' />
     ),
     cell: ({ row }) => {
       const { status } = row.original
@@ -92,7 +95,7 @@ export const usersColumns: ColumnDef<User>[] = [
       return (
         <div className='flex space-x-2'>
           <Badge variant='outline' className={cn('capitalize', badgeColor)}>
-            {row.getValue('status')}
+            {STATUS_LABELS[status] ?? status}
           </Badge>
         </div>
       )
@@ -106,7 +109,7 @@ export const usersColumns: ColumnDef<User>[] = [
   {
     accessorKey: 'role',
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title='Role' />
+      <DataTableColumnHeader column={column} title='Роль' />
     ),
     cell: ({ row }) => {
       const { role } = row.original
@@ -121,7 +124,7 @@ export const usersColumns: ColumnDef<User>[] = [
           {userType.icon && (
             <userType.icon size={16} className='text-muted-foreground' />
           )}
-          <span className='text-sm capitalize'>{row.getValue('role')}</span>
+          <span className='text-sm'>{userType.label}</span>
         </div>
       )
     },

@@ -31,7 +31,7 @@ const formSchema = z.object({
     error: (iss) =>
       iss.input === '' ? 'Please enter an email to invite.' : undefined,
   }),
-  role: z.string().min(1, 'Role is required.'),
+  role: z.string().min(1, 'Выберите роль.'),
   desc: z.string().optional(),
 })
 
@@ -68,11 +68,10 @@ export function UsersInviteDialog({
       <DialogContent className='sm:max-w-md'>
         <DialogHeader className='text-start'>
           <DialogTitle className='flex items-center gap-2'>
-            <MailPlus /> Invite User
+            <MailPlus /> Пригласить
           </DialogTitle>
           <DialogDescription>
-            Invite new user to join your team by sending them an email
-            invitation. Assign a role to define their access level.
+            Пригласите нового пользователя по email и назначьте роль, чтобы определить его права.
           </DialogDescription>
         </DialogHeader>
         <Form {...form}>
@@ -103,11 +102,11 @@ export function UsersInviteDialog({
               name='role'
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Role</FormLabel>
+                  <FormLabel>Роль</FormLabel>
                   <SelectDropdown
                     defaultValue={field.value}
                     onValueChange={field.onChange}
-                    placeholder='Select a role'
+                    placeholder='Выберите роль'
                     items={roles.map(({ label, value }) => ({
                       label,
                       value,
@@ -138,10 +137,10 @@ export function UsersInviteDialog({
         </Form>
         <DialogFooter className='gap-y-2'>
           <DialogClose asChild>
-            <Button variant='outline'>Cancel</Button>
+            <Button variant='outline'>Отмена</Button>
           </DialogClose>
           <Button type='submit' form='user-invite-form'>
-            Invite <Send />
+            Пригласить <Send />
           </Button>
         </DialogFooter>
       </DialogContent>

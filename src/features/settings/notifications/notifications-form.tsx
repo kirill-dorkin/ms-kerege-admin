@@ -58,7 +58,7 @@ export function NotificationsForm() {
           name='type'
           render={({ field }) => (
             <FormItem className='relative space-y-3'>
-              <FormLabel>Notify me about...</FormLabel>
+              <FormLabel>Уведомлять о...</FormLabel>
               <FormControl>
                 <RadioGroup
                   onValueChange={field.onChange}
@@ -70,7 +70,7 @@ export function NotificationsForm() {
                       <RadioGroupItem value='all' />
                     </FormControl>
                     <FormLabel className='font-normal'>
-                      All new messages
+                      Все новые сообщения
                     </FormLabel>
                   </FormItem>
                   <FormItem className='flex items-center'>
@@ -78,14 +78,14 @@ export function NotificationsForm() {
                       <RadioGroupItem value='mentions' />
                     </FormControl>
                     <FormLabel className='font-normal'>
-                      Direct messages and mentions
+                      Личные сообщения и упоминания
                     </FormLabel>
                   </FormItem>
                   <FormItem className='flex items-center'>
                     <FormControl>
                       <RadioGroupItem value='none' />
                     </FormControl>
-                    <FormLabel className='font-normal'>Nothing</FormLabel>
+                    <FormLabel className='font-normal'>Ничего</FormLabel>
                   </FormItem>
                 </RadioGroup>
               </FormControl>
@@ -94,7 +94,7 @@ export function NotificationsForm() {
           )}
         />
         <div className='relative'>
-          <h3 className='mb-4 text-lg font-medium'>Email Notifications</h3>
+          <h3 className='mb-4 text-lg font-medium'>Уведомления по почте</h3>
           <div className='space-y-4'>
             <FormField
               control={form.control}
@@ -103,10 +103,10 @@ export function NotificationsForm() {
                 <FormItem className='flex flex-row items-center justify-between rounded-lg border p-4'>
                   <div className='space-y-0.5'>
                     <FormLabel className='text-base'>
-                      Communication emails
+                      Служебные письма
                     </FormLabel>
                     <FormDescription>
-                      Receive emails about your account activity.
+                      Письма об активности аккаунта.
                     </FormDescription>
                   </div>
                   <FormControl>
@@ -125,10 +125,10 @@ export function NotificationsForm() {
                 <FormItem className='flex flex-row items-center justify-between rounded-lg border p-4'>
                   <div className='space-y-0.5'>
                     <FormLabel className='text-base'>
-                      Marketing emails
+                      Маркетинговые письма
                     </FormLabel>
                     <FormDescription>
-                      Receive emails about new products, features, and more.
+                      Письма о новых продуктах и функциях.
                     </FormDescription>
                   </div>
                   <FormControl>
@@ -146,9 +146,9 @@ export function NotificationsForm() {
               render={({ field }) => (
                 <FormItem className='flex flex-row items-center justify-between rounded-lg border p-4'>
                   <div className='space-y-0.5'>
-                    <FormLabel className='text-base'>Social emails</FormLabel>
+                    <FormLabel className='text-base'>Социальные письма</FormLabel>
                     <FormDescription>
-                      Receive emails for friend requests, follows, and more.
+                      Письма о заявках в друзья и подписках.
                     </FormDescription>
                   </div>
                   <FormControl>
@@ -166,9 +166,9 @@ export function NotificationsForm() {
               render={({ field }) => (
                 <FormItem className='flex flex-row items-center justify-between rounded-lg border p-4'>
                   <div className='space-y-0.5'>
-                    <FormLabel className='text-base'>Security emails</FormLabel>
+                    <FormLabel className='text-base'>Письма о безопасности</FormLabel>
                     <FormDescription>
-                      Receive emails about your account activity and security.
+                      Письма об активности и безопасности аккаунта.
                     </FormDescription>
                   </div>
                   <FormControl>
@@ -197,23 +197,23 @@ export function NotificationsForm() {
               </FormControl>
               <div className='space-y-1 leading-none'>
                 <FormLabel>
-                  Use different settings for my mobile devices
+                  Отдельные настройки для мобильных устройств
                 </FormLabel>
                 <FormDescription>
-                  You can manage your mobile notifications in the{' '}
+                  Уведомлениями на телефоне можно управлять в{' '}
                   <Link
                     to='/settings'
                     className='underline decoration-dashed underline-offset-4 hover:decoration-solid'
                   >
-                    mobile settings
-                  </Link>{' '}
-                  page.
+                    мобильных настройках
+                  </Link>
+                  .
                 </FormDescription>
               </div>
             </FormItem>
           )}
         />
-        <Button type='submit'>Update notifications</Button>
+        <Button type='submit'>Сохранить уведомления</Button>
       </form>
     </Form>
   )

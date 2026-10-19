@@ -74,8 +74,8 @@ export function UsersMultiDeleteDialog<TData>({
           className='space-y-4'
         >
           <p className='mb-2'>
-            Are you sure you want to delete the selected users? <br />
-            This action cannot be undone.
+            Удалить выбранных пользователей? <br />
+            Это действие нельзя отменить.
           </p>
 
           <Label className='my-4 flex flex-col items-start gap-1.5'>
@@ -89,14 +89,14 @@ export function UsersMultiDeleteDialog<TData>({
           </Label>
 
           <Alert variant='destructive'>
-            <AlertTitle>Warning!</AlertTitle>
+            <AlertTitle>Внимание!</AlertTitle>
             <AlertDescription>
-              Please be careful, this operation can not be rolled back.
+              Осторожно: это действие нельзя откатить.
             </AlertDescription>
           </Alert>
         </form>
       }
-      confirmText='Delete'
+      confirmText='Удалить'
       destructive
     />
   )

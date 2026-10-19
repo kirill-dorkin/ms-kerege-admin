@@ -6,13 +6,13 @@ export function RecentSales() {
       <div className='flex items-center gap-4'>
         <Avatar className='h-9 w-9'>
           <AvatarImage src='/avatars/01.png' alt='Avatar' />
-          <AvatarFallback>OM</AvatarFallback>
+          <AvatarFallback>АС</AvatarFallback>
         </Avatar>
         <div className='flex flex-1 flex-wrap items-center justify-between'>
           <div className='space-y-1'>
-            <p className='text-sm leading-none font-medium'>Olivia Martin</p>
+            <p className='text-sm leading-none font-medium'>Айгерим Садыкова</p>
             <p className='text-sm text-muted-foreground'>
-              olivia.martin@email.com
+              aigerim@example.com
             </p>
           </div>
           <div className='font-medium'>+$1,999.00</div>
@@ -21,13 +21,13 @@ export function RecentSales() {
       <div className='flex items-center gap-4'>
         <Avatar className='flex h-9 w-9 items-center justify-center space-y-0 border'>
           <AvatarImage src='/avatars/02.png' alt='Avatar' />
-          <AvatarFallback>JL</AvatarFallback>
+          <AvatarFallback>НА</AvatarFallback>
         </Avatar>
         <div className='flex flex-1 flex-wrap items-center justify-between'>
           <div className='space-y-1'>
-            <p className='text-sm leading-none font-medium'>Jackson Lee</p>
+            <p className='text-sm leading-none font-medium'>Нурлан Абдыкадыров</p>
             <p className='text-sm text-muted-foreground'>
-              jackson.lee@email.com
+              nurlan@example.com
             </p>
           </div>
           <div className='font-medium'>+$39.00</div>
@@ -36,13 +36,13 @@ export function RecentSales() {
       <div className='flex items-center gap-4'>
         <Avatar className='h-9 w-9'>
           <AvatarImage src='/avatars/03.png' alt='Avatar' />
-          <AvatarFallback>IN</AvatarFallback>
+          <AvatarFallback>КИ</AvatarFallback>
         </Avatar>
         <div className='flex flex-1 flex-wrap items-center justify-between'>
           <div className='space-y-1'>
-            <p className='text-sm leading-none font-medium'>Isabella Nguyen</p>
+            <p className='text-sm leading-none font-medium'>Камила Исаева</p>
             <p className='text-sm text-muted-foreground'>
-              isabella.nguyen@email.com
+              kamila@example.com
             </p>
           </div>
           <div className='font-medium'>+$299.00</div>
@@ -52,12 +52,12 @@ export function RecentSales() {
       <div className='flex items-center gap-4'>
         <Avatar className='h-9 w-9'>
           <AvatarImage src='/avatars/04.png' alt='Avatar' />
-          <AvatarFallback>WK</AvatarFallback>
+          <AvatarFallback>ЭК</AvatarFallback>
         </Avatar>
         <div className='flex flex-1 flex-wrap items-center justify-between'>
           <div className='space-y-1'>
-            <p className='text-sm leading-none font-medium'>William Kim</p>
-            <p className='text-sm text-muted-foreground'>will@email.com</p>
+            <p className='text-sm leading-none font-medium'>Эрлан Ким</p>
+            <p className='text-sm text-muted-foreground'>erlan@example.com</p>
           </div>
           <div className='font-medium'>+$99.00</div>
         </div>
@@ -66,13 +66,13 @@ export function RecentSales() {
       <div className='flex items-center gap-4'>
         <Avatar className='h-9 w-9'>
           <AvatarImage src='/avatars/05.png' alt='Avatar' />
-          <AvatarFallback>SD</AvatarFallback>
+          <AvatarFallback>СЛ</AvatarFallback>
         </Avatar>
         <div className='flex flex-1 flex-wrap items-center justify-between'>
           <div className='space-y-1'>
-            <p className='text-sm leading-none font-medium'>Sofia Davis</p>
+            <p className='text-sm leading-none font-medium'>София Ли</p>
             <p className='text-sm text-muted-foreground'>
-              sofia.davis@email.com
+              sofia@example.com
             </p>
           </div>
           <div className='font-medium'>+$39.00</div>

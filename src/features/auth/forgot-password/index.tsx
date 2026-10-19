@@ -16,11 +16,10 @@ export function ForgotPassword() {
       <Card className='max-w-sm gap-4 sm:min-w-sm'>
         <CardHeader>
           <CardTitle className='text-lg tracking-tight'>
-            Forgot Password
+            Восстановление пароля
           </CardTitle>
           <CardDescription>
-            Enter your registered email and <br /> we will send you a link to
-            reset your password.
+            Введите email, указанный при регистрации, и <br /> мы пришлём ссылку для сброса пароля.
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -28,12 +27,12 @@ export function ForgotPassword() {
         </CardContent>
         <CardFooter>
           <p className='mx-auto px-8 text-center text-sm text-balance text-muted-foreground'>
-            Don't have an account?{' '}
+            Нет аккаунта?{' '}
             <Link
               to='/sign-up'
               className='underline underline-offset-4 hover:text-primary'
             >
-              Sign up
+              Зарегистрироваться
             </Link>
             .
           </p>

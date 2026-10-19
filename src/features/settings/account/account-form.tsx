@@ -31,23 +31,23 @@ import {
 import { DatePicker } from '@/components/date-picker'
 
 const languages = [
-  { label: 'English', value: 'en' },
-  { label: 'French', value: 'fr' },
-  { label: 'German', value: 'de' },
-  { label: 'Spanish', value: 'es' },
-  { label: 'Portuguese', value: 'pt' },
-  { label: 'Russian', value: 'ru' },
-  { label: 'Japanese', value: 'ja' },
-  { label: 'Korean', value: 'ko' },
-  { label: 'Chinese', value: 'zh' },
+  { label: 'Английский', value: 'en' },
+  { label: 'Французский', value: 'fr' },
+  { label: 'Немецкий', value: 'de' },
+  { label: 'Испанский', value: 'es' },
+  { label: 'Португальский', value: 'pt' },
+  { label: 'Русский', value: 'ru' },
+  { label: 'Японский', value: 'ja' },
+  { label: 'Корейский', value: 'ko' },
+  { label: 'Китайский', value: 'zh' },
 ] as const
 
 const accountFormSchema = z.object({
   name: z
     .string()
-    .min(1, 'Please enter your name.')
-    .min(2, 'Name must be at least 2 characters.')
-    .max(30, 'Name must not be longer than 30 characters.'),
+    .min(1, 'Введите имя.')
+    .min(2, 'Имя — не короче 2 символов.')
+    .max(30, 'Имя — не длиннее 30 символов.'),
   dob: z.date('Please select your date of birth.'),
   language: z.string('Please select a language.'),
 })
@@ -77,13 +77,12 @@ export function AccountForm() {
           name='name'
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Name</FormLabel>
+              <FormLabel>Имя</FormLabel>
               <FormControl>
-                <Input placeholder='Your name' {...field} />
+                <Input placeholder='Ваше имя' {...field} />
               </FormControl>
               <FormDescription>
-                This is the name that will be displayed on your profile and in
-                emails.
+                Это имя будет в профиле и в письмах.
               </FormDescription>
               <FormMessage />
             </FormItem>
@@ -94,10 +93,10 @@ export function AccountForm() {
           name='dob'
           render={({ field }) => (
             <FormItem className='flex flex-col'>
-              <FormLabel>Date of birth</FormLabel>
+              <FormLabel>Дата рождения</FormLabel>
               <DatePicker selected={field.value} onSelect={field.onChange} />
               <FormDescription>
-                Your date of birth is used to calculate your age.
+                Дата рождения нужна, чтобы определить возраст.
               </FormDescription>
               <FormMessage />
             </FormItem>
@@ -108,7 +107,7 @@ export function AccountForm() {
           name='language'
           render={({ field }) => (
             <FormItem className='flex flex-col'>
-              <FormLabel>Language</FormLabel>
+              <FormLabel>Язык</FormLabel>
               <Popover>
                 <PopoverTrigger asChild>
                   <FormControl>
@@ -124,15 +123,15 @@ export function AccountForm() {
                         ? languages.find(
                             (language) => language.value === field.value
                           )?.label
-                        : 'Select language'}
+                        : 'Выберите язык'}
                       <CaretSortIcon className='ms-2 h-4 w-4 shrink-0 opacity-50' />
                     </Button>
                   </FormControl>
                 </PopoverTrigger>
                 <PopoverContent className='w-50 p-0'>
                   <Command>
-                    <CommandInput placeholder='Search language...' />
-                    <CommandEmpty>No language found.</CommandEmpty>
+                    <CommandInput placeholder='Поиск языка...' />
+                    <CommandEmpty>Язык не найден.</CommandEmpty>
                     <CommandGroup>
                       <CommandList>
                         {languages.map((language) => (
@@ -160,13 +159,13 @@ export function AccountForm() {
                 </PopoverContent>
               </Popover>
               <FormDescription>
-                This is the language that will be used in the dashboard.
+                Язык интерфейса панели.
               </FormDescription>
               <FormMessage />
             </FormItem>
           )}
         />
-        <Button type='submit'>Update account</Button>
+        <Button type='submit'>Сохранить аккаунт</Button>
       </form>
     </Form>
   )

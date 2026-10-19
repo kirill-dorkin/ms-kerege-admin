@@ -75,14 +75,14 @@ export function UsersDeleteDialog({
           </Label>
 
           <Alert variant='destructive'>
-            <AlertTitle>Warning!</AlertTitle>
+            <AlertTitle>Внимание!</AlertTitle>
             <AlertDescription>
-              Please be careful, this operation can not be rolled back.
+              Осторожно: это действие нельзя откатить.
             </AlertDescription>
           </Alert>
         </form>
       }
-      confirmText='Delete'
+      confirmText='Удалить'
       destructive
     />
   )

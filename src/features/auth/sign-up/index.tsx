@@ -16,16 +16,16 @@ export function SignUp() {
       <Card className='max-w-sm gap-4'>
         <CardHeader>
           <CardTitle className='text-lg tracking-tight'>
-            Create an account
+            Создать аккаунт
           </CardTitle>
           <CardDescription>
-            Enter your email and password to create an account. <br />
-            Already have an account?{' '}
+            Введите email и пароль, чтобы создать аккаунт. <br />
+            Уже есть аккаунт?{' '}
             <Link
               to='/sign-in'
               className='underline underline-offset-4 hover:text-primary'
             >
-              Sign In
+              Вход
             </Link>
           </CardDescription>
         </CardHeader>
@@ -34,19 +34,19 @@ export function SignUp() {
         </CardContent>
         <CardFooter>
           <p className='px-8 text-center text-sm text-muted-foreground'>
-            By creating an account, you agree to our{' '}
+            Создавая аккаунт, вы соглашаетесь с{' '}
             <a
               href='/terms'
               className='underline underline-offset-4 hover:text-primary'
             >
-              Terms of Service
+              Условиями использования
             </a>{' '}
-            and{' '}
+            и{' '}
             <a
               href='/privacy'
               className='underline underline-offset-4 hover:text-primary'
             >
-              Privacy Policy
+              Политикой конфиденциальности
             </a>
             .
           </p>

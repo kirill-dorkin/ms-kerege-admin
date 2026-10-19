@@ -13,41 +13,41 @@ import {
 export const labels = [
   {
     value: 'bug',
-    label: 'Bug',
+    label: 'Ошибка',
   },
   {
     value: 'feature',
-    label: 'Feature',
+    label: 'Функция',
   },
   {
     value: 'documentation',
-    label: 'Documentation',
+    label: 'Документация',
   },
 ]
 
 export const statuses = [
   {
-    label: 'Backlog',
+    label: 'Бэклог',
     value: 'backlog' as const,
     icon: HelpCircle,
   },
   {
-    label: 'Todo',
+    label: 'К выполнению',
     value: 'todo' as const,
     icon: Circle,
   },
   {
-    label: 'In Progress',
+    label: 'В работе',
     value: 'in progress' as const,
     icon: Timer,
   },
   {
-    label: 'Done',
+    label: 'Готово',
     value: 'done' as const,
     icon: CheckCircle,
   },
   {
-    label: 'Canceled',
+    label: 'Отменена',
     value: 'canceled' as const,
     icon: CircleOff,
   },
@@ -55,22 +55,22 @@ export const statuses = [
 
 export const priorities = [
   {
-    label: 'Low',
+    label: 'Низкий',
     value: 'low' as const,
     icon: ArrowDown,
   },
   {
-    label: 'Medium',
+    label: 'Средний',
     value: 'medium' as const,
     icon: ArrowRight,
   },
   {
-    label: 'High',
+    label: 'Высокий',
     value: 'high' as const,
     icon: ArrowUp,
   },
   {
-    label: 'Critical',
+    label: 'Критический',
     value: 'critical' as const,
     icon: AlertCircle,
   },

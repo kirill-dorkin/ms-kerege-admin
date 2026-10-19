@@ -17,34 +17,33 @@ export function SignIn2() {
         </div>
         <div className='mx-auto flex w-full max-w-sm flex-col justify-center space-y-2'>
           <div className='flex flex-col space-y-2 text-start'>
-            <h2 className='text-lg font-semibold tracking-tight'>Sign in</h2>
+            <h2 className='text-lg font-semibold tracking-tight'>Войти</h2>
             <p className='text-sm text-muted-foreground'>
-              Enter your email and password below to log into{' '}
-              <br className='max-sm:hidden' /> your account. Don't have an
-              account?{' '}
+              Введите email и пароль, чтобы войти в
+              <br className='max-sm:hidden' /> аккаунт. Нет аккаунта?{' '}
               <Link
                 to='/sign-up'
                 className='text-nowrap underline underline-offset-4 hover:text-primary'
               >
-                Sign Up
+                Регистрация
               </Link>
             </p>
           </div>
           <UserAuthForm />
           <p className='px-8 text-center text-sm text-muted-foreground'>
-            By clicking sign in, you agree to our{' '}
+            Нажимая «Войти», вы соглашаетесь с{' '}
             <a
               href='/terms'
               className='underline underline-offset-4 hover:text-primary'
             >
-              Terms of Service
+              Условиями использования
             </a>{' '}
-            and{' '}
+            и{' '}
             <a
               href='/privacy'
               className='underline underline-offset-4 hover:text-primary'
             >
-              Privacy Policy
+              Политикой конфиденциальности
             </a>
             .
           </p>
@@ -62,14 +61,14 @@ export function SignIn2() {
           className='dark:hidden'
           width={1024}
           height={1151}
-          alt='Shadcn-Admin'
+          alt='Kerege Admin'
         />
         <img
           src={dashboardDark}
           className='hidden dark:block'
           width={1024}
           height={1138}
-          alt='Shadcn-Admin'
+          alt='Kerege Admin'
         />
       </div>
     </div>

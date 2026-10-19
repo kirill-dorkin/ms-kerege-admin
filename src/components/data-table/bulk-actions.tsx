@@ -79,7 +79,7 @@ export function DataTableBulkActions<TData>({
         buttons[prevIndex]?.focus()
         break
       }
-      case 'Home':
+      case 'Главная':
         event.preventDefault()
         buttons[0]?.focus()
         break
@@ -163,11 +163,11 @@ export function DataTableBulkActions<TData>({
                 size='icon'
                 onClick={handleClearSelection}
                 className='size-6 rounded-full'
-                aria-label='Clear selection'
+                aria-label='Снять выделение'
                 title='Clear selection (Escape)'
               >
                 <X />
-                <span className='sr-only'>Clear selection</span>
+                <span className='sr-only'>Снять выделение</span>
               </Button>
             </TooltipTrigger>
             <TooltipContent>

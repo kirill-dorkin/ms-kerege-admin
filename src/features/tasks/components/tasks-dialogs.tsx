@@ -60,10 +60,10 @@ export function TasksDialogs() {
               <>
                 You are about to delete a task with the ID{' '}
                 <strong>{currentRow.id}</strong>. <br />
-                This action cannot be undone.
+                Это действие нельзя отменить.
               </>
             }
-            confirmText='Delete'
+            confirmText='Удалить'
           />
         </>
       )}
