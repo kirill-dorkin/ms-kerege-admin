@@ -4,8 +4,10 @@ import { fakerRU as faker } from '@faker-js/faker'
 faker.seed(67890)
 
 export const users = Array.from({ length: 500 }, () => {
-  const firstName = faker.person.firstName()
-  const lastName = faker.person.lastName()
+  // Same sex for first and last name, so Russian surnames agree with the name.
+  const sex = faker.person.sexType()
+  const firstName = faker.person.firstName(sex)
+  const lastName = faker.person.lastName(sex)
   return {
     id: faker.string.uuid(),
     firstName,
